@@ -1,0 +1,3 @@
+interface GeneralAction {
+  type: string;
+}

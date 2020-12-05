@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@ant-design/pro-layout": "^6.4.1",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.2.14",
+    "agora-rtc-sdk-ng": "^4.0.1",
+    "antd": "^4.5.2",
+    "classnames": "^2.2.6",
+    "dva": "^2.4.1",
+    "lint-staged": "^10.0.7",
+    "moment": "^2.22.2",
+    "node-fetch": "^2.6.0",
+    "prettier": "^1.19.1",
+    "ramda": "^0.27.1",
+    "react": "^16.12.0",
+    "react-cookies": "^0.1.1",
+    "react-dom": "^16.12.0",
+    "redux-logger": "^3.0.6",
+    "umi": "^3.2.14",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "@types/react-cookies": "^0.1.0",
+    "@types/redux-logger": "^3.0.8"
+  }
+}
